@@ -1,233 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaditi Industries | Pulses Processing</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Merriweather', serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aaditi Industries - Yummy Cartoon Foods</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', 'Fredoka', cursive;
+      background-color: #fff8f0;
+      color: #333;
+    }
 
-        h1, h2, h3 {
-            color: #4b3d29;
-        }
+    header {
+      background: #ffcc00;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: #d94f04;
+    }
 
-        /* Header Styles */
-        header {
-            background-color: #8E6B3F;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
+    nav {
+      margin-top: 10px;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-        }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
 
-        nav {
-            background-color: #6d4f2b;
-            padding: 10px;
-        }
+    .hero {
+      background: url('https://cdn.pixabay.com/photo/2016/04/01/10/06/food-1303272_1280.png') no-repeat center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-        }
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 10px;
+    }
 
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
 
-        nav ul li a {
-            color: #fff;
-            font-size: 18px;
-            text-transform: uppercase;
-        }
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #ff6600;
+    }
 
-        nav ul li a:hover {
-            border-bottom: 2px solid #fff;
-        }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
 
-        /* Hero Section */
-        .hero {
-            background: url('https://via.placeholder.com/1600x600') no-repeat center center;
-            background-size: cover;
-            padding: 100px 0;
-            text-align: center;
-            color: #fff;
-        }
+    .product-card {
+      width: 250px;
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
 
-        .hero h2 {
-            font-size: 48px;
-            margin: 0;
-        }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
 
-        .hero p {
-            font-size: 20px;
-        }
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        /* Section Styles */
-        section {
-            padding: 50px 20px;
-            text-align: center;
-        }
+    .product-info {
+      padding: 15px;
+    }
 
-        section h2 {
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
+    .product-info h4 {
+      margin: 10px 0;
+    }
 
-        section p {
-            font-size: 18px;
-            line-height: 1.6;
-        }
+    .product-info button {
+      background: #ff6600;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
 
-        /* Products & Services */
-        .products, .services {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
+    footer {
+      background: #ffeaa7;
+      text-align: center;
+      padding: 30px 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
 
-        .products .card, .services .card {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            width: 28%;
-            margin: 10px;
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+    .contact {
+      margin-top: 40px;
+    }
 
-        .card img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain;
-            margin-bottom: 20px;
-        }
-
-        .card h3 {
-            font-size: 24px;
-        }
-
-        .card p {
-            font-size: 16px;
-        }
-
-        /* Footer Styles */
-        footer {
-            background-color: #8E6B3F;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        footer p {
-            font-size: 16px;
-            margin: 10px 0;
-        }
-
-        footer a {
-            color: #fff;
-            font-size: 18px;
-        }
-
-        footer a:hover {
-            text-decoration: underline;
-        }
-
-    </style>
+    @media (max-width: 768px) {
+      .products {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <h1>Aaditi Industries</h1>
-        <p>Pulses Processing Company | MIDC Akola, Maharashtra</p>
-    </header>
-
-    <!-- Navigation -->
+  <header>
+    <h1>Aaditi Industries</h1>
     <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Quality</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h2>Welcome to Aaditi Industries</h2>
-        <p>Your Trusted Partner in Premium Pulses Processing</p>
+  <section class="hero">
+    <h2>Deliciously Cartoonish Food Products!</h2>
+  </section>
+
+  <section class="section" id="products">
+    <h3>Our Tasty Products ??</h3>
+    <div class="products">
+      <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2014/12/21/23/28/burger-575434_960_720.png" alt="Burger Delight">
+        <div class="product-info">
+          <h4>Smiley Burger</h4>
+          <p>$4.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2013/07/12/12/58/pizza-146245_960_720.png" alt="Pizza">
+        <div class="product-info">
+          <h4>Cheesy Pizza</h4>
+          <p>$6.49</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="https://cdn.pixabay.com/photo/2021/03/23/07/20/donut-6116943_960_720.png" alt="Donut">
+        <div class="product-info">
+          <h4>Funky Donut</h4>
+          <p>$2.99</p>
+          <button>Add to Cart</button>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <!-- About Us Section -->
-    <section>
-        <h2>About Us</h2>
-        <p>Aaditi Industries is a leading pulses processing company based in MIDC Akola, Maharashtra. With a vision to provide the highest quality pulses to our customers, we use state-of-the-art technology and maintain the best standards in hygiene and quality control.</p>
-    </section>
+  <section class="section" id="about">
+    <h3>About Aaditi Industries</h3>
+    <p>At Aaditi Industries, we mix taste with fun! Our cartoon-themed food products are crafted with love, quality ingredients, and a dash of imagination. Perfect for kids, families, and snack lovers of all ages!</p>
+  </section>
 
-    <!-- Products Section -->
-    <section class="products">
-        <h2>Our Products</h2>
-        <div class="card">
-            <img src="https://via.placeholder.com/100" alt="Chana Dal">
-            <h3>Chana Dal</h3>
-            <p>Premium quality Chana Dal processed with care and precision.</p>
-        </div>
-        <div class="card">
-            <img src="https://krnagrl.github.io/aaditiindustries/toor-dal.jpg" alt="Toor Dal">
-            <h3>Toor Dal</h3>
-            <p>High-quality Toor Dal processed to perfection for the finest taste.</p>
-        </div>
-        <div class="card">
-            <img src="https://via.placeholder.com/100" alt="Moong Dal">
-            <h3>Moong Dal</h3>
-            <p>Moong Dal, rich in protein and nutrients, processed with modern technology.</p>
-        </div>
-    </section>
+  <section class="section contact" id="contact">
+    <h3>Contact Us ??</h3>
+    <p>Email: hello@aaditiindustries.com</p>
+    <p>Phone: +91 8669334862</p>
+    <p>Address: Aaditi Industries, Behind Lakshmi weigh bridge, MIDC Phase III, Akola MH</p>
+  </section>
 
-    <!-- Services Section -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="card">
-            <h3>Processing</h3>
-            <p>We provide high-end processing services to ensure the purity and quality of our pulses.</p>
-        </div>
-        <div class="card">
-            <h3>Packaging</h3>
-            <p>Our packaging ensures that the pulses stay fresh and are delivered to you in the best condition.</p>
-        </div>
-        <div class="card">
-            <h3>Quality Control</h3>
-            <p>We follow stringent quality control measures to meet the highest industry standards.</p>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Aaditi Industries. All rights reserved.</p>
-        <p><a href="mailto:info@aaditiindustries.com">Contact Us</a></p>
-        <p>Follow us on social media for updates!</p>
-    </footer>
+  <footer>
+    &copy; 2025 Aaditi Industries.
+  </footer>
 
 </body>
 </html>
