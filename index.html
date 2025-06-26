@@ -1,195 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Aaditi Industries - Yummy Cartoon Foods</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aaditi Industries</title>
   <style>
     body {
+      font-family: Arial, sans-serif;
       margin: 0;
-      font-family: 'Comic Sans MS', 'Fredoka', cursive;
-      background-color: #fff8f0;
-      color: #333;
+      background-color: #f4f4f4;
     }
-
-    header {
-      background: #ffcc00;
+    .container {
+      margin: 0 auto;
+      width: 60%; /* 20% margin on each side */
+      background: white;
       padding: 20px;
+    }
+    header {
       text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 20px 0;
+      background-color: #003366;
+      color: white;
     }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-      color: #d94f04;
-    }
-
     nav {
-      margin-top: 10px;
+      text-align: center;
+      margin: 20px 0;
     }
-
     nav a {
       margin: 0 15px;
       text-decoration: none;
-      color: #333;
+      color: #003366;
       font-weight: bold;
     }
-
-    .hero {
-      background: url('https://cdn.pixabay.com/photo/2016/04/01/10/06/food-1303272_1280.png') no-repeat center/cover;
-      color: #fff;
-      padding: 100px 20px;
-      text-align: center;
+    section {
+      margin: 30px 0;
     }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      background-color: rgba(0,0,0,0.5);
-      display: inline-block;
-      padding: 10px 20px;
-      border-radius: 10px;
+    h2 {
+      color: #003366;
     }
-
-    .section {
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .section h3 {
-      font-size: 2rem;
-      margin-bottom: 30px;
-      color: #ff6600;
-    }
-
     .products {
       display: flex;
       flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
+      gap: 20px;
     }
-
-    .product-card {
-      width: 250px;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-
-    .product-card:hover {
-      transform: scale(1.05);
-    }
-
-    .product-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .product-info {
+    .product {
+      flex: 1 1 45%;
+      background: #e9e9e9;
       padding: 15px;
+      border-radius: 8px;
     }
-
-    .product-info h4 {
-      margin: 10px 0;
+    iframe {
+      width: 100%;
+      border: 0;
+      border-radius: 8px;
     }
-
-    .product-info button {
-      background: #ff6600;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
     footer {
-      background: #ffeaa7;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.9rem;
-      color: #555;
-    }
-
-    .contact {
+      padding: 15px;
+      background-color: #003366;
+      color: white;
       margin-top: 40px;
     }
-
-    @media (max-width: 768px) {
-      .products {
-        flex-direction: column;
-        align-items: center;
-      }
+    .socials a {
+      margin: 0 10px;
+      color: #003366;
+      text-decoration: none;
+      font-size: 18px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Aaditi Industries</h1>
+      <p>Innovation. Quality. Trust.</p>
+    </header>
 
-  <header>
-    <h1>Aaditi Industries</h1>
     <nav>
       <a href="#products">Products</a>
-      <a href="#about">About</a>
+      <a href="#location">Location</a>
       <a href="#contact">Contact</a>
+      <a href="#video">Video</a>
     </nav>
-  </header>
 
-  <section class="hero">
-    <h2>Deliciously Cartoonish Food Products!</h2>
-  </section>
-
-  <section class="section" id="products">
-    <h3>Our Tasty Products ??</h3>
-    <div class="products">
-      <div class="product-card">
-        <img src="https://cdn.pixabay.com/photo/2014/12/21/23/28/burger-575434_960_720.png" alt="Burger Delight">
-        <div class="product-info">
-          <h4>Smiley Burger</h4>
-          <p>$4.99</p>
-          <button>Add to Cart</button>
+    <section id="products">
+      <h2>Our Products</h2>
+      <div class="products">
+        <div class="product">
+          <h3>Product A</h3>
+          <p>High-quality industrial component for manufacturing units.</p>
+        </div>
+        <div class="product">
+          <h3>Product B</h3>
+          <p>Durable and efficient engineering solution for heavy machinery.</p>
+        </div>
+        <div class="product">
+          <h3>Product C</h3>
+          <p>Reliable component trusted by top-tier industries.</p>
+        </div>
+        <div class="product">
+          <h3>Product D</h3>
+          <p>Cost-effective and long-lasting mechanical tool.</p>
         </div>
       </div>
-      <div class="product-card">
-        <img src="https://cdn.pixabay.com/photo/2013/07/12/12/58/pizza-146245_960_720.png" alt="Pizza">
-        <div class="product-info">
-          <h4>Cheesy Pizza</h4>
-          <p>$6.49</p>
-          <button>Add to Cart</button>
-        </div>
+    </section>
+
+    <section id="location">
+      <h2>Our Location</h2>
+      <p>Find us at our headquarters:</p>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241317.11609896835!2d72.74109843386497!3d19.08219783961447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63e2f34d1c9%3A0x4c12312bd8e20228!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1684567890"
+        height="300"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@aaditiindustries.com</p>
+      <p>Phone: +91 98765 43210</p>
+      <p>Address: Plot No. 123, Industrial Estate, Mumbai, Maharashtra, India</p>
+      <div class="socials">
+        <a href="https://facebook.com/aaditiindustries" target="_blank">Facebook</a> |
+        <a href="https://twitter.com/aaditiindustries" target="_blank">Twitter</a> |
+        <a href="https://linkedin.com/company/aaditiindustries" target="_blank">LinkedIn</a> |
+        <a href="https://instagram.com/aaditiindustries" target="_blank">Instagram</a>
       </div>
-      <div class="product-card">
-        <img src="https://cdn.pixabay.com/photo/2021/03/23/07/20/donut-6116943_960_720.png" alt="Donut">
-        <div class="product-info">
-          <h4>Funky Donut</h4>
-          <p>$2.99</p>
-          <button>Add to Cart</button>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section" id="about">
-    <h3>About Aaditi Industries</h3>
-    <p>At Aaditi Industries, we mix taste with fun! Our cartoon-themed food products are crafted with love, quality ingredients, and a dash of imagination. Perfect for kids, families, and snack lovers of all ages!</p>
-  </section>
+    <section id="video">
+      <h2>Our Promotional Video</h2>
+      <iframe 
+        height="315" 
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="Aaditi Industries Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </section>
 
-  <section class="section contact" id="contact">
-    <h3>Contact Us ??</h3>
-    <p>Email: hello@aaditiindustries.com</p>
-    <p>Phone: +91 8669334862</p>
-    <p>Address: Aaditi Industries, Behind Lakshmi weigh bridge, MIDC Phase III, Akola MH</p>
-  </section>
-
-  <footer>
-    &copy; 2025 Aaditi Industries.
-  </footer>
-
+    <footer>
+      &copy; 2025 Aaditi Industries. All rights reserved.
+    </footer>
+  </div>
 </body>
 </html>
