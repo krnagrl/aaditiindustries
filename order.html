@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Place Order - Aaditi Industries</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      margin: 0 auto;
+      width: 60%;
+      background: white;
+      padding: 20px;
+    }
+    header {
+      text-align: center;
+      padding: 20px 0;
+      background-color: #003366;
+      color: white;
+    }
+    nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #003366;
+      font-weight: bold;
+    }
+    section {
+      margin: 30px 0;
+    }
+    h2 {
+      color: #003366;
+    }
+    form {
+      background: #e9e9e9;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #25D366;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1da851;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #003366;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+  <script>
+    function submitOrder(event) {
+      event.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const product = document.getElementById('product').value;
+      const quantity = document.getElementById('quantity').value;
+      const message = document.getElementById('message').value;
+
+      const phoneNumber = '919423127644'; // Aaditi Industries WhatsApp number
+
+      const url = `https://wa.me/${phoneNumber}?text=Hello%2C%20I%20am%20${encodeURIComponent(name)}.%0AI%20want%20to%20order%3A%20${encodeURIComponent(product)}%0AQuantity%3A%20${encodeURIComponent(quantity)}%0AMessage%3A%20${encodeURIComponent(message)}`;
+
+      window.open(url, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Aaditi Industries</h1>
+      <p>Place Your Order</p>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="order.html">Order</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section>
+      <h2>Order Form</h2>
+      <form onsubmit="submitOrder(event)">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" required />
+
+        <label for="product">Product</label>
+        <select id="product" required>
+          <option value="">--Select Product--</option>
+          <option value="Toor Dall - Fatka">Toor Dall - Fatka</option>
+          <option value="Toor Dall - Sawanumber">Toor Dall - Sawanumber</option>
+          <option value="Toor Dall - Teen Number">Toor Dall - Teen Number</option>
+          <option value="Toor Dall - Rejection">Toor Dall - Rejection</option>
+          <option value="Animal Feed - Churi">Animal Feed - Churi</option>
+        </select>
+
+        <label for="quantity">Quantity (in Kg)</label>
+        <input type="number" id="quantity" required min="1" />
+
+        <label for="message">Additional Message (Optional)</label>
+        <textarea id="message" rows="4" placeholder="Any delivery instructions or other requests..."></textarea>
+
+        <button type="submit">Order via WhatsApp</button>
+      </form>
+    </section>
+
+    <footer>
+      &copy; 2025 Aaditi Industries. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
